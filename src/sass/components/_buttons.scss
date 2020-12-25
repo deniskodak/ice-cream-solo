@@ -1,0 +1,29 @@
+.button {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.btn-menu {
+  @extend .button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background: transparent;
+}
+.btn-menu__icon {
+  width: 44px;
+  height: 44px;
+  fill: $accent-color;
+}
+
+.btn-buy {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+  width: 209px;
+}

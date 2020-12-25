@@ -1,0 +1,53 @@
+.section-hero {
+  background-color: $background-pink;
+
+  .container {
+    padding-top: 193px;
+    padding-bottom: 160px;
+
+    background-image: url(../images/hero/mobile/mobile_icecream_1x.png),
+      url(../images/hero/mobile/mobile_ellips_1x.png);
+
+    background-repeat: no-repeat;
+    background-position: 117px 92px, 36px 83px;
+    background-size: 171px 410px, 346px 344px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero/mobile/mobile_icecream_2x.png),
+        url(../images/hero/mobile/mobile_ellips_2x.png);
+    }
+  }
+}
+.hero-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-box__title {
+  width: 218px;
+  margin-bottom: 19px;
+
+  font-family: 'Titan One', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.153;
+
+  text-transform: uppercase;
+  color: $white-color;
+
+  .hero-box__span {
+    font-size: 48px;
+    line-height: 0.965;
+    color: $accent-color;
+  }
+}
+
+.hero-box__right {
+  display: none;
+}
+
+.hero-info {
+  display: none;
+}

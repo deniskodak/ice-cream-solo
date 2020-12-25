@@ -1,0 +1,12 @@
+.section-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  padding-top: 6px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
