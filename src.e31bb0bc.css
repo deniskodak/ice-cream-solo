@@ -1,24 +1,182 @@
-@charset "UTF-8";
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
-.example {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-  color: #212121;
-  max-width: 960px;
-  padding: 15px;
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
-.example code {
-  font-family: monospace;
-  font-size: 16px;
-  font-weight: 700;
-  background-color: teal;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 2px;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 320px) {
+  .container {
+    width: 320px;
+  }
+}
+@media (min-width: 740px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding-right: 114px;
+    padding-left: 114px;
+  }
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.site-menu {
+  display: none;
+}
+
+.button, .btn-menu {
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.btn-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: transparent;
+}
+
+.btn-menu__icon {
+  width: 44px;
+  height: 44px;
+  fill: #d41443;
+}
+
+.btn-buy {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 209px;
+}
+
+.section-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 6px;
+}
+.section-header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-hero {
+  background-color: #ffb8ca;
+}
+.section-hero .container {
+  padding-top: 193px;
+  padding-bottom: 160px;
+  background-image: url(/mobile_icecream_1x.6859684d.png), url(/mobile_ellips_1x.6484d375.png);
+  background-repeat: no-repeat;
+  background-position: 117px 92px, 36px 83px;
+  background-size: 171px 410px, 346px 344px;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .section-hero .container {
+    background-image: url(/mobile_icecream_2x.e441fce4.png), url(/mobile_ellips_2x.ac4dbcaf.png);
+  }
+}
+
+.hero-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-box__title {
+  width: 218px;
+  margin-bottom: 19px;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.153;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.hero-box__title .hero-box__span {
+  font-size: 48px;
+  line-height: 0.965;
+  color: #d41443;
+}
+
+.hero-box__right {
+  display: none;
+}
+
+.hero-info {
+  display: none;
+}
+
+.hero-box__link {
+  display: inline-flex;
+  padding: 9px 14px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: normal;
+  border-radius: 20px;
+  outline: none;
+}
+.hero-box__link:nth-child(2) {
+  background-color: #d41443;
+  color: #ffffff;
+  margin-right: 8px;
+}
+.hero-box__link:nth-child(2):hover, .hero-box__link:nth-child(2):focus {
+  background-color: #c7133e;
+  border: 1px solid #ffffff;
+}
+.hero-box__link:nth-child(3) {
+  background-color: #ffffff;
+  color: #d41443;
+}
+.hero-box__link:nth-child(3):hover, .hero-box__link:nth-child(3):focus {
+  background-color: #ecebeb;
+  border: 1px solid #d41443;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
