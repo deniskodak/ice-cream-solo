@@ -18,16 +18,24 @@
       background-image: url(../images/hero/mobile/mobile_icecream_2x.png),
         url(../images/hero/mobile/mobile_ellips_2x.png);
     }
+
+    @include for-size(tablet) {
+      padding-top: 102px;
+    }
   }
 }
 .hero-box {
   display: flex;
   justify-content: space-between;
+
+  @include for-size(tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .hero-box__title {
   width: 218px;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 
   font-family: 'Titan One', sans-serif;
   font-weight: 400;
@@ -50,4 +58,28 @@
 
 .hero-info {
   display: none;
+
+  @include for-size(tablet) {
+    display: flex;
+  }
+}
+.hero-info__content {
+  width: 114px;
+}
+.hero-info__text {
+  font-size: 8px;
+  line-height: 1.5;
+  color: $white-color;
+
+  margin-bottom: 7px;
+}
+
+.hero-info__link {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: $white-color;
+  border-radius: 50%;
+}
+.hero-info__icon {
 }
