@@ -1,6 +1,6 @@
 .hero-box__link {
   display: inline-flex;
-  padding: 9px 14px;
+  height: 24px;
 
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
@@ -11,9 +11,11 @@
   outline: none;
 
   &:nth-child(2) {
+    margin-right: 8px;
+    width: 62px;
+
     background-color: $accent-color;
     color: $white-color;
-    margin-right: 8px;
 
     &:hover,
     &:focus {
@@ -22,6 +24,8 @@
     }
   }
   &:nth-child(3) {
+    width: 83px;
+
     background-color: $white-color;
     color: $accent-color;
 
@@ -30,5 +34,13 @@
       background-color: $button-secondary-hover;
       border: 1px solid $accent-color;
     }
+  }
+
+  @include for-size(desktop) {
+    width: 104px;
+    height: 40px;
+
+    font-size: 14px;
+    line-height: 1.28;
   }
 }

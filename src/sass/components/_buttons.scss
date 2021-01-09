@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   outline: none;
+  border: none;
 }
 
 .btn-menu {
@@ -12,6 +13,10 @@
 
   border: none;
   background: transparent;
+
+  @include for-size(tablet) {
+    margin-left: auto;
+  }
 }
 .btn-menu__icon {
   width: 44px;
@@ -20,10 +25,30 @@
 }
 
 .btn-buy {
+  @extend .button;
   display: none;
-  align-items: center;
-  justify-content: center;
 
   height: 44px;
   width: 209px;
+  color: $accent-color;
+
+  background-color: $white-color;
+  border-radius: 22px;
+
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    margin-left: 30px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+  }
+
+  .btn-buy__icon {
+    margin-left: 12px;
+    height: 10px;
+  }
 }
