@@ -48,8 +48,8 @@
         url(../images/hero/desktop/desktop_girl_1x.png),
         url(../images/hero/desktop/desktop_ellips_1x.png);
 
-      background-position: bottom right 228px, bottom right 28px,
-        top 34px right 132px;
+      background-position: bottom right 448px, bottom right 112px,
+        top 55px right 267px;
       background-size: 236px 557px, 293px 232px, 538px 538px;
 
       @media screen and (min-device-pixel-ratio: 2),
@@ -70,12 +70,13 @@
   @include for-size(tablet) {
     margin-bottom: 20px;
   }
-}
-.hero-box__left {
   @include for-size(desktop) {
-    margin-left: 95px;
+    padding-right: 77px;
+    padding-left: 95px;
+    margin-bottom: 56px;
   }
 }
+
 .hero-box__title {
   width: 218px;
   margin-bottom: 20px;
@@ -136,6 +137,11 @@
   text-align: right;
   color: $accent-color;
 
+  @include for-size(desktop) {
+    font-size: 46px;
+    line-height: 1.152;
+  }
+
   &::after {
     position: absolute;
     top: 0;
@@ -150,10 +156,20 @@
     border-radius: 50%;
 
     transform: translateY(-10%);
+
+    @include for-size(desktop) {
+      width: 30px;
+      height: 30px;
+      transform: translate(25%, -25%);
+    }
   }
 
   &:not(:last-child) {
     margin-bottom: 13px;
+
+    @include for-size(desktop) {
+      margin-bottom: 20px;
+    }
   }
 }
 .hero-box__label {
@@ -164,6 +180,11 @@
   line-height: 1.25;
   text-transform: lowercase;
   color: $white-color;
+
+  @include for-size(desktop) {
+    font-size: 14px;
+    line-height: 1.285;
+  }
 }
 
 .hero-info {

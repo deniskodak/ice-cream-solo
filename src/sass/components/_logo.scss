@@ -1,0 +1,5 @@
+.logo-link {
+  @include for-size(desktop) {
+    margin-left: 26px;
+  }
+}
