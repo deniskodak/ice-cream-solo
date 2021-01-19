@@ -1,0 +1,102 @@
+.stats-section {
+  padding-bottom: 87px;
+  background-color: $section-background;
+
+  @include for-size(tablet) {
+    padding-bottom: 140px;
+  }
+}
+
+.stats-list {
+  @include for-size(tablet) {
+    display: flex;
+  }
+}
+
+.stats-list__item {
+  &::before {
+    display: block;
+    content: '';
+
+    height: 50px;
+
+    background-repeat: no-repeat;
+
+    margin-bottom: 15px;
+
+    @include for-size(tablet) {
+      margin-bottom: 36px;
+    }
+
+    @include for-size(tablet) {
+      margin-bottom: 40px;
+    }
+  }
+  &:nth-child(1)::before {
+    background-image: url(../images/icons/icon1.svg);
+  }
+  &:nth-child(2)::before {
+    background-image: url(../images/icons/icon2.svg);
+  }
+  &:nth-child(3)::before {
+    background-image: url(../images/icons/icon3.svg);
+  }
+
+  &:not(:last-child) {
+    @include for-size(mobile-only) {
+      margin-bottom: 38px;
+    }
+
+    @include for-size(tablet) {
+      margin-right: 60px;
+    }
+  }
+
+  @include for-size(tablet) {
+    width: calc((100%-180px) / 3);
+  }
+}
+
+.stats-list__text {
+  @extend %title;
+
+  font-size: 36px;
+  line-height: 1.138;
+  text-align: left;
+
+  color: $accent-color;
+
+  @include for-size(tablet) {
+    font-size: 48px;
+    line-height: 1.145;
+
+    margin-bottom: 13px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 58px;
+    line-height: 1.137;
+
+    margin-bottom: 15px;
+  }
+}
+
+.stats-list__sub-text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: $black-color;
+
+  @include for-size(tablet) {
+    font-size: 14px;
+    line-height: 1.74;
+  }
+
+  @include for-size(desktop) {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+  }
+}

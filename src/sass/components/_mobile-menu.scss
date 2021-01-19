@@ -1,3 +1,75 @@
-.mobile-menu {
-  display: none;
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+
+  height: 502px;
+  padding-top: 60px;
+
+  background-color: $burger-background;
+  -webkit-box-shadow: -11px 9px 12px -1px rgba(0, 0, 0, 0.23);
+  box-shadow: -11px 9px 12px -1px rgba(0, 0, 0, 0.23);
+
+  pointer-events: none;
+  visibility: hidden;
+
+  @include for-size(tablet) {
+    height: 1020px;
+  }
+
+  @include for-size(desktop) {
+    display: none;
+  }
+
+  .btn-buy {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-bottom: 20px;
+
+    @include for-size(tablet) {
+      width: 186px;
+    }
+  }
+}
+
+.mobile-nav.is-open {
+  animation-name: mobileMenu;
+  animation-duration: 1250ms;
+  animation-direction: alternate;
+  animation-timing-function: $cubic;
+
+  pointer-events: initial;
+  visibility: visible;
+}
+
+.mobile-menu__item {
+  border: 1px solid #e18298;
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: 12px 0px 12px 21px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.285;
+
+  color: $white-color;
+
+  &:hover,
+  &:focus {
+    transition: 250ms $cubic;
+    color: $accent-color;
+  }
+
+  &.is-active {
+    color: $accent-color;
+  }
 }

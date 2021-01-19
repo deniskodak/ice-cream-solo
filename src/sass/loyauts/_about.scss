@@ -1,0 +1,293 @@
+.about-section {
+  padding-top: 121px;
+  padding-bottom: 98px;
+
+  @include for-size(tablet) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 130px;
+    padding-bottom: 119px;
+  }
+}
+
+.about__subtitle {
+  @extend %sub-title;
+  font-size: 18px;
+  line-height: 1.16;
+
+  margin-bottom: 15px;
+
+  @include for-size(tablet) {
+    font-size: 26px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 30px;
+  }
+}
+
+.about__title {
+  @extend %title;
+  font-size: 34px;
+  line-height: 1.147;
+
+  margin-bottom: 144px;
+
+  @include for-size(tablet) {
+    font-size: 48px;
+
+    margin-bottom: 150px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 58px;
+    letter-spacing: 0.06em;
+
+    margin-bottom: 259px;
+  }
+}
+
+.about-list {
+  @include for-size(tablet) {
+    display: flex;
+  }
+
+  @include for-size(desktop) {
+    padding-right: 97px;
+    padding-left: 97px;
+  }
+}
+
+.about-list__item {
+  position: relative;
+  padding: 161px 40px 40px;
+
+  border-radius: 24px;
+  text-align: center;
+
+  @include for-size(tablet) {
+    width: calc((100%-2 * 20px) / 3);
+    padding: 152px 11px 40px;
+  }
+
+  @include for-size(desktop) {
+    width: calc((100%-2 * 24px) / 3);
+    padding: 163px 44px 50px;
+  }
+
+  &:not(:last-child) {
+    @include for-size(mobile-only) {
+      margin-bottom: 130px;
+    }
+
+    @include for-size(tablet) {
+      margin-right: 20px;
+    }
+
+    @include for-size(desktop) {
+      margin-right: 24px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: -113px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 249px;
+    height: 252px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include for-size(tablet) {
+      width: 220px;
+    }
+
+    @include for-size(desktop) {
+      top: -210px;
+      width: 335px;
+      height: 335px;
+    }
+  }
+  &:nth-child(1) {
+    background-color: $background-pink;
+  }
+  &:nth-child(1)::before {
+    background-image: url(../images/products/mobile/mobile_product1_1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/mobile/mobile_product1_2x.png);
+    }
+
+    @media screen and (min-width: 740px) and (max-width: 1279px) {
+      top: -104px;
+      height: 226px;
+      background-image: url(../images/products/tablet/tablet_product1_1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/tablet/tablet_product1_2x.png);
+      }
+    }
+
+    @include for-size(desktop) {
+      background-image: url(../images/products/desktop/desktop_product1_1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/desktop/desktop_product1_2x.png);
+      }
+    }
+  }
+  &:nth-child(2) {
+    background-color: $light-brown-color;
+  }
+  &:nth-child(2)::before {
+    background-image: url(../images/products/mobile/mobile_product2_1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/mobile/mobile_product2_2x.png);
+    }
+
+    @media screen and (min-width: 740px) and (max-width: 1279px) {
+      top: -111px;
+      height: 233px;
+      background-image: url(../images/products/tablet/tablet_product2_1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/tablet/tablet_product2_2x.png);
+      }
+    }
+
+    @include for-size(desktop) {
+      background-image: url(../images/products/desktop/desktop_product2_1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/desktop/desktop_product2_2x.png);
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $light-green-color;
+  }
+
+  &:nth-child(3)::before {
+    background-image: url(../images/products/mobile/mobile_product3_1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/mobile/mobile_product3_2x.png);
+    }
+
+    @media screen and (min-width: 740px) and (max-width: 1279px) {
+      top: -102px;
+      height: 224px;
+      background-image: url(../images/products/tablet/tablet_product3_1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/tablet/tablet_product3_2x.png);
+      }
+    }
+
+    @include for-size(desktop) {
+      background-image: url(../images/products/desktop/desktop_product3_1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/desktop/desktop_product3_2x.png);
+      }
+    }
+  }
+}
+
+.about-list__title {
+  @extend %title;
+  font-size: 20px;
+  line-height: 1.15;
+  color: $white-color;
+
+  margin-bottom: 30px;
+
+  @include for-size(desktop) {
+    font-size: 30px;
+    line-height: 1.33;
+
+    margin-bottom: 32px;
+  }
+}
+
+.about-list__decor {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  @include for-size(desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.about-list__dots {
+  display: block;
+
+  width: 6px;
+  height: 6px;
+  background-color: $white-color;
+  border-radius: 50%;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+}
+
+.about-list__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  color: $white-color;
+
+  margin-bottom: 30px;
+
+  @include for-size(tablet) {
+    line-height: 1.76;
+    height: 124px;
+    overflow: auto;
+
+    margin-bottom: 40px;
+  }
+
+  @include for-size(desktop) {
+    height: 106px;
+    font-size: 16px;
+
+    margin-bottom: 62px;
+  }
+}
+
+.about-list__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}

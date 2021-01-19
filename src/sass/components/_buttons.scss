@@ -5,8 +5,40 @@
   border: none;
 }
 
-.btn-menu {
+.btn-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+  border-radius: 22px;
+  background-color: $white-color;
+  color: $accent-color;
+
+  outline: none;
+  border: none;
+
+  transition: background-color 250ms $cubic, color 250ms $cubic 100ms;
+
+  &:hover,
+  &:focus {
+    color: $button-primary-hover;
+    background-color: $button-secondary-hover;
+  }
+}
+
+.btn__icon {
+  margin-left: 10px;
+
+  width: 7px;
+  height: 10px;
+}
+
+.menu-btn {
   @extend .button;
+  position: relative;
+  z-index: 10;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,23 +52,45 @@
   @include for-size(desktop) {
     display: none;
   }
+  &.is-open {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
 }
-.btn-menu__icon {
+
+.menu-btn__icon {
   width: 44px;
   height: 44px;
   fill: $accent-color;
 }
 
+.menu-btn__icon-close {
+  display: none;
+  width: 14px;
+  height: 14px;
+
+  fill: $white-color;
+}
+
+.menu-btn.is-open .menu-btn__icon-close {
+  display: block;
+}
+
+.menu-btn.is-open .menu-btn__icon-burger {
+  display: none;
+}
+
 .btn-buy {
   @extend .button;
+  @extend .btn-link;
   display: none;
 
-  height: 44px;
   width: 209px;
-  color: $accent-color;
 
-  background-color: $white-color;
-  border-radius: 22px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.312;
 
   @include for-size(tablet) {
     display: flex;
@@ -44,18 +98,9 @@
     justify-content: center;
     width: 160px;
     margin-left: 30px;
-
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
   }
 
   @include for-size(desktop) {
     margin-right: 95px;
-  }
-
-  .btn-buy__icon {
-    margin-left: 12px;
-    height: 10px;
   }
 }

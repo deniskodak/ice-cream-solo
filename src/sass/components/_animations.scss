@@ -1,0 +1,16 @@
+@keyframes mobileMenu {
+  0% {
+    transform: translateX(100%);
+    background-color: #ec6988;
+  }
+
+  50% {
+    transform: translateX(-10%);
+    background-color: #d3637d;
+  }
+
+  100% {
+    transform: translateX(0%);
+    background-color: #e17992;
+  }
+}

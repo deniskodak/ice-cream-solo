@@ -2,6 +2,7 @@
 @import './utils/mixins';
 @import './utils/utils';
 @import './base/commons';
+@import './components/animations';
 @import './components/container';
 @import './components/logo';
 @import './components/site-nav';
@@ -11,3 +12,8 @@
 @import './loyauts/header';
 @import './loyauts/hero';
 @import './components/links-hero';
+@import './loyauts/about';
+@import './loyauts/tradition';
+@import './loyauts/stats';
+@import './loyauts/gallery';
+@import './loyauts/slider';

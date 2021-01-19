@@ -4,6 +4,7 @@
             <img src="./images/icons/logo.png" alt="Лого сайта" class="logo-img">
         </a>
         <nav class="site-nav">
+
             <ul class="site-menu">
                 <li class="site-menu__item"><a href="" class="site-menu__link is-active">Home</a></li>
                 <li class="site-menu__item"><a href="" class="site-menu__link">About us</a></li>
@@ -11,23 +12,32 @@
                 <li class="site-menu__item"><a href="" class="site-menu__link">Our products</a></li>
                 <li class="site-menu__item"><a href="" class="site-menu__link">Contact</a></li>
             </ul>
+
             <div class="mobile-nav" data-menu id="mobile-menu">
+
+                <button type="button" class="btn-buy">Buy now
+                    <img class="btn__icon" src="./images/icons/vector.svg" alt="Иконка узнать больше">
+                </button>
+
                 <ul class="mobile-menu" >
+                    <li class="mobile-menu__item"><a href="" class="mobile-menu__link is-active">Home</a></li>
                     <li class="mobile-menu__item"><a href="" class="mobile-menu__link">About us</a></li>
-                    <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Home</a></li>
                     <li class="mobile-menu__item"><a href="" class="mobile-menu__link">How it`s made?</a></li>
                     <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Our products</a></li>
                     <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <button class="btn-menu" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-menu">
-            <svg class="btn-menu__icon">
-                <use href="./images/icons/sprite.svg#burger"></use>
+
+        <button class="menu-btn" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="16">
+                <use class="menu-btn__icon menu-btn__icon-burger" href="./images/icons/sprite.svg#icon-menu_big"></use>
+                <use class="menu-btn__icon menu-btn__icon-close" href="./images/icons/sprite.svg#icon-closemark"></use>
             </svg>
         </button>
-        <button type="button" class="btn-buy">Buy now
-        <img class="btn-buy__icon" src="./images/icons/vector.svg" alt="свг стрелка">
+
+        <button type="button" type="button" class="btn-buy">Buy now
+            <img class="btn__icon" src="./images/icons/vector.svg" alt="Иконка узнать больше">
         </button>
     </div>
 </header>
